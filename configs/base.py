@@ -8,7 +8,7 @@ class BaseConfig():
         #---------------------
         # Training Parameters
         #---------------------
-        self.data_root = '/media/administrator/1305D8BDB8D46DEE/jhu'
+        self.data_root = '/content/drive/MyDrive/zhanglab'
         # self.data_root = 'C:\\Users\libro\SQUID\data\zhanglab'  # version locaL DATASET ROOT
 
         
