@@ -53,11 +53,11 @@ class Config(BaseConfig):
         self.d_w = 0.005
 
         
-        self.train_dataset = Zhang(self.data_root+'/ZhangLabData/CellData/chest_xray/train', train=True, img_size=(self.img_size, self.img_size))
+        self.train_dataset = Zhang(self.data_root+'/train', train=True, img_size=(self.img_size, self.img_size))
         self.train_loader = torch.utils.data.DataLoader(self.train_dataset, batch_size=self.batch_size, shuffle=True, num_workers=0, drop_last=False)
 
-        self.val_dataset = Zhang(self.data_root+'/ZhangLabData/CellData/chest_xray/val', train=False, img_size=(self.img_size, self.img_size), full=True)
+        self.val_dataset = Zhang(self.data_root+'/val', train=False, img_size=(self.img_size, self.img_size), full=True)
         self.val_loader = torch.utils.data.DataLoader(self.val_dataset, batch_size=1, shuffle=False, num_workers=0, drop_last=False)
 
-        self.test_dataset = Zhang(self.data_root+'/ZhangLabData/CellData/chest_xray/test', train=False, img_size=(self.img_size, self.img_size), full=True)
+        self.test_dataset = Zhang(self.data_root+'/test', train=False, img_size=(self.img_size, self.img_size), full=True)
         self.test_loader = torch.utils.data.DataLoader(self.test_dataset, batch_size=1, shuffle=False, num_workers=0, drop_last=False)
