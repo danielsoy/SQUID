@@ -68,7 +68,7 @@ class Zhang(torch.utils.data.Dataset):
         return len(self.data)
 
 if __name__ == '__main__':
-    dataset = Zhang('/media/administrator/1305D8BDB8D46DEE/jhu/ZhangLabData/CellData/chest_xray/val', train=False)
+    dataset = Zhang('/content/drive/MyDrive/zhanglab/val', train=False)
     trainloader = torch.utils.data.DataLoader(dataset, batch_size=1, shuffle=True, num_workers=0)
     for i, (img, label) in enumerate(trainloader):
         if img.shape[1] == 3:
