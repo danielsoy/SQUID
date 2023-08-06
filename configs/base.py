@@ -14,7 +14,7 @@ class BaseConfig():
         
         self.print_freq = 10
         self.device = 'cuda:0'
-        self.epochs = 400
+        self.epochs = 10
         self.lr = 1e-4#1e-3 # learning rate
         self.batch_size = 16
         self.test_batch_size = 2
